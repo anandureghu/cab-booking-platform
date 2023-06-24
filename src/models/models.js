@@ -20,6 +20,10 @@ class Cab {
   addRide(ride) {
     this.rides.push(ride);
   }
+
+  fetchRides() {
+    return this.rides;
+  }
 }
 
 class Location {
@@ -64,6 +68,10 @@ class Rider extends User {
   addRide(ride) {
     this.rides.push(ride);
   }
+
+  fetchRides() {
+    return this.rides;
+  }
 }
 
 class UserService {
@@ -83,6 +91,7 @@ class Ride {
     this.cabLocation = cabLocation;
     this.completed = false;
     this.cancelled = false;
+    this.createdAt = new Date();
   }
 
   completeRide() {
